@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block nav-price %}<a class="active" href="#">Price</a>{% endblock %}
+
+{% block content %}
+    <div class="row title">
+        <p>Price</p>
+    </div>
+    <div class="row">
+        {{ text.text }}
+    </div>
+    <div class="row  py-4">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name of service</th>
+                    <th scope="col">Number of photos</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for a in priceList%}
+                    <tr>
+                        <th scope="row">{{ a.id }}</th>
+                        <td>{{ a.name_of_service }}</td>
+                        <td>{{ a.number_of_photos }}</td>
+                        <td>{{ a.price }} $</td>
+                    </tr>
+                {%endfor%}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

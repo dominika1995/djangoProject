@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block nav-contact %}<a class="active" href="#">Contact</a>{% endblock %}
+
+{% block content %}
+    <div class="row title">
+        <p>Contact Us</p>
+    </div>
+    <div class="row">
+        <div class="col-5"></div>
+        <div class="email__form col-7">
+            <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-actions">
+                <button type="submit">Send</button>
+            </div>
+            </form>
+        </div>
+    </div>
+    </div>
+{% endblock %}

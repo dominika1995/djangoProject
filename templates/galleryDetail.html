@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block nav-gallery %}<a class="active" href="{% url 'gallery' %}">Gallery</a>{% endblock %}
+
+{% block content %}
+    <div class="row title">
+        <p>Gallery</p>
+    </div>
+
+    {%for a in catalog%}
+        <p class="text-center mainTitle">{{ a.title }}</p>
+        <div class="row">
+            {% for image in a.image %}
+                <div class="col-4 my-3">
+                    <img class="rounded img-thumbnail" src="../{{ image }}">
+                </div>
+            {%endfor%}
+        </div>
+    {%endfor%}
+{% endblock %}

@@ -1,0 +1,54 @@
+nav {
+    font-family: 'Sacramento', Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  background-color: white;
+    padding-top:30px;
+}
+
+nav a {
+  float: right;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+nav a:hover {
+  color: gray;
+}
+
+nav a.active {
+  color: gray;
+}
+
+div.logo {
+  font-family: 'Sacramento';
+    line-height: 0.8;
+    padding-top: 20px;
+    font-size: 60px;
+    padding-left: 50px;
+}
+
+div.logo .logo_second {
+    padding-left: 40px
+}
+
+.title {
+    font-family: 'Sacramento';
+    margin-top: 20px;
+    font-size: 50px;
+}
+
+.title p {
+    margin-left: 10%;
+}
+
+.email__form p input{
+    margin-left: 40px;
+}
+
+.email__form p textarea{
+    margin-left: 40px;
+}
+
