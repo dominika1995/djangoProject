@@ -5,5 +5,5 @@ from django.urls import path
 from .views import successView
 
 urlpatterns = [
-    path('price/', successView),
+    path('price/', successView, name="price"),
 ]
