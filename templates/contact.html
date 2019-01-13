@@ -1,20 +1,37 @@
 {% extends 'base.html' %}
-{% block nav-contact %}<a class="active" href="#">Contact</a>{% endblock %}
+{% block nav-contact %}<a class="active" href="{% url 'contact' %}">Contact</a>{% endblock %}
 
 {% block content %}
     <div class="row title">
         <p>Contact Us</p>
     </div>
     <div class="row">
-        <div class="col-5"></div>
-        <div class="email__form col-7">
-            <form method="post">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <div class="form-actions">
-                <button type="submit">Send</button>
-            </div>
-            </form>
+        <div class="email__form col-6">
+            {% if form %}
+                <form method="post">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="mt-2">
+                            {{ field.label_tag }}<br>
+                            {{ field }}
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-actions text-center">
+                        <button type="submit" class="btn btn-secondary">Send</button>
+                    </div>
+                </form>
+            {% else %}
+                <div class="mt-5 px-5">
+                    {{ success }}
+                </div>
+            {% endif %}
+
+
+        </div>
+        <div class="col-6 mt-5 px-5">
+            {{ text }}
         </div>
     </div>
     </div>

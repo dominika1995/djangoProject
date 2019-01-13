@@ -57,6 +57,14 @@ div.logo .logo_second {
     text-transform: uppercase;
 }
 
+label {
+    margin-bottom: 0 !important;
+}
+
+input, textarea {
+    width: 100%;
+}
+
 footer {
     background-color: gray;
     clear: both;
