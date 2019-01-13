@@ -1,8 +1,8 @@
 nav {
-    font-family: 'Sacramento', Helvetica, Arial, sans-serif;
+  font-family: 'Sacramento', Helvetica, Arial, sans-serif;
   overflow: hidden;
   background-color: white;
-    padding-top:30px;
+  padding-top:30px;
 }
 
 nav a {
@@ -50,5 +50,26 @@ div.logo .logo_second {
 
 .email__form p textarea{
     margin-left: 40px;
+}
+
+.mainTitle {
+    font-family: 'Sacramento';
+    text-transform: uppercase;
+}
+
+footer {
+    background-color: gray;
+    clear: both;
+    position: relative;
+    height: 120px;
+    margin-top: -120px;
+}
+
+footer .menu a{
+    color: white;
+}
+
+footer .menu  a:hover {
+    color: white;
 }
 
