@@ -7,6 +7,8 @@ class InlineImage(admin.TabularInline):
 
 
 class CatalogAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name', 'data')
+    ordering = ('id',)
     inlines = [InlineImage]
 
 
